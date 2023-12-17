@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a565ccb4.css",
+    "main.js": "/static/js/main.d31be63b.js",
+    "static/js/787.21e5cda4.chunk.js": "/static/js/787.21e5cda4.chunk.js",
+    "static/media/SF-Pro-Rounded.otf": "/static/media/SF-Pro-Rounded.72faf94d6d363c4e94a2.otf",
+    "static/media/abtimage.png": "/static/media/abtimage.1eebb5e2fa6ead607b10.png",
+    "static/media/logpagesbg.png": "/static/media/logpagesbg.57c384b5a9196d45ee63.png",
+    "static/media/image.png": "/static/media/image.21cbdcf8f09fd8cc9bb5.png",
+    "static/media/GilroyMedium.ttf": "/static/media/GilroyMedium.23dfbc19380d778f2742.ttf",
+    "static/media/Fontspring-DEMO-proximanovacond-medium.otf": "/static/media/Fontspring-DEMO-proximanovacond-medium.24252a991af3deab4481.otf",
+    "static/media/Fontspring-DEMO-proximanovacond-regular.otf": "/static/media/Fontspring-DEMO-proximanovacond-regular.2e296926416a58e85a1b.otf",
+    "static/media/Fontspring-DEMO-proximanovaexcn-bold.otf": "/static/media/Fontspring-DEMO-proximanovaexcn-bold.c6955c3e472e65335d13.otf",
+    "static/media/Fontspring-DEMO-proximanovaexcn-semibold.otf": "/static/media/Fontspring-DEMO-proximanovaexcn-semibold.d718bd38dc1472c09ab2.otf",
+    "index.html": "/index.html",
+    "main.a565ccb4.css.map": "/static/css/main.a565ccb4.css.map",
+    "main.d31be63b.js.map": "/static/js/main.d31be63b.js.map",
+    "787.21e5cda4.chunk.js.map": "/static/js/787.21e5cda4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a565ccb4.css",
+    "static/js/main.d31be63b.js"
+  ]
+}

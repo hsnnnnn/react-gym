@@ -1,0 +1,549 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&family=Roboto:wght@300&display=swap");
+@font-face {
+  font-family: "Proxima Nova Extra Bold";
+  src: url(./Fonts/Fontspring-DEMO-proximanovaexcn-semibold.otf);
+}
+
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url(./Fonts/Fontspring-DEMO-proximanovacond-regular.otf);
+}
+
+@font-face {
+  font-family: "Proxima Nova Black";
+  src: url(./Fonts/Fontspring-DEMO-proximanovaexcn-bold.otf);
+}
+
+@font-face {
+  font-family: "Proxima Nova Medium";
+  src: url(./Fonts/Fontspring-DEMO-proximanovacond-medium.otf);
+}
+
+@font-face {
+  font-family: "Gilroy Bold";
+  src: url(./Fonts/GilroyMedium.ttf);
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url(./Fonts/SF-Pro-Rounded.otf);}
+
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.bordertest {
+  border: 1px solid red;
+}
+
+.fontRoboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.headerfirst {
+  border-bottom: 1px solid black;
+}
+
+.lgn {
+  font-family: 'Proxima Nova Extra Bold';
+  letter-spacing : 0.1vw;
+  color: white;
+  font-size: 1.1vw;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+
+.signup {
+  font-family: 'Proxima Nova Extra Bold';
+  letter-spacing : 0.1vw;
+  border: 1px solid black;
+  color: black;
+  font-size: 1.1vw;
+  transition: all 0.2s ease-in-out;
+}
+
+.signup:hover {
+  background-color: black;
+  color: white;
+}
+
+.lgn:hover {
+  background-color: white;
+  color: black;
+}
+
+.headeritem {
+  font-family: "Proxima Nova Regular";
+  font-size: 1.1vw;
+  transition: all 0.2s ease-in-out;
+}
+
+.headeritem:hover {
+  color: #000000b5;
+  
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.imgcontainer {
+  opacity: 0.95;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.imgcontainer:hover {
+  opacity: 1;
+}
+
+.abtheader {
+  font-family: "Proxima Nova Medium";
+  font-size: 1.2vw;
+}
+
+.prsnl{
+  font-family: "Proxima Nova Black";
+  font-size: 2.5vw;
+}
+
+.abtmessage {
+  font-family: "Proxima Nova Regular";
+  font-size: 1.1vw;
+}
+
+.applybtn {
+  font-family: "Proxima Nova Regular";
+  font-size: 1.2vw;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+
+.applybtn:hover {
+  background: black;
+  color: white;
+}
+
+.abtusheader {
+  font-family: "Proxima Nova Medium";
+  font-size: 1.2vw;
+}
+
+.abtussectiontext {
+  font-family: "Proxima Nova Black";
+  font-size: 3.5vw;
+}
+
+.sectiondesc {
+  text-indent: 1vw;
+  font-size: 1.1vw;
+}
+
+
+.right-align {
+  text-align: justify;
+}
+
+.right-align:after {
+  content: '';
+  display: inline-block;
+  
+}
+
+.abtpagesbtn {
+  font-family: "Proxima Nova Medium";
+  font-size: 1.2vw;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+  color: black;
+}
+
+.abtpagesbtn:hover {
+  background: black;
+  color: white;
+
+}
+
+.aboutimage {
+  background-image: url(./Assets/abtimage.png);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+.headerfirst {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: red;
+}
+
+.market-header{
+  font-family: "SF Pro Rounded";
+  font-size: 1.2vw;
+  color: black;
+}
+
+.market-item-header {
+  font-family: "Proxima Nova Black";
+  font-size: 2.8vw;
+  color: black;
+}
+
+.iteminfo {
+  font-family: "SF Pro Rounded";
+  font-size: 1.3vw;
+  color: black;
+  font-weight: 600;
+}
+
+.iteminfo-price {
+  border-right: 0.18vw solid black;
+}
+
+.stats {
+  font-family: "SF Pro Rounded";
+  font-size: 1.2vw;
+
+  transition: all 0.2s ease-in-out;
+  color: black;
+}
+
+.itemdescription {
+  font-family: "Proxima Nova Medium";
+  text-align: justify;
+}
+
+.buynow{
+  font-family: 'Proxima Nova Extra Bold';
+  letter-spacing : 0.1vw;
+  color: black;
+  font-size: 1.1vw;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+
+.addtocart {
+  font-family: 'Proxima Nova Extra Bold';
+  letter-spacing : 0.1vw;
+  color: black;
+  font-size: 1.1vw;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
+}
+
+.addtocart:hover {
+  background-color: black;
+  color: white;
+}
+.buynow:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+.seemore {
+  font-family: "SF Pro Rounded";
+  font-size: 1.2vw;
+
+  transition: all 0.2s ease-in-out;
+  color: black;
+}
+
+.seemore:hover {
+  color: #000000b5;
+}
+
+.contacttag{
+  font-family: "Proxima Nova Medium";
+  color: black;
+  font-size: 1.2vw;
+}
+
+.contactlocation{
+  font-family: "Proxima Nova Black";
+  font-size: 2.8vw;
+  color: black;
+}
+
+.contactdesc {
+  font-family: "Proxima Nova Regular";
+  font-size: 1.1vw;
+}
+
+.locationheader {
+  font-family: "Proxima Nova Black";
+  font-size: 1.6vw;
+}
+
+.locationinfo{
+  font-family: "Proxima Nova Medium";
+  color: black;
+  font-size: 1vw;
+}
+
+.viewmap {
+  font-family: "Proxima Nova Black";
+  color: black;
+  font-size: 0.9vw;
+}
+
+.city-item {
+  
+}
+
+.active {
+  border-left: 0.2vw solid black;
+}
+
+.viewmap:hover{
+  text-decoration: underline;
+}
+
+.footerdesc {
+  background: #F4F4F4;
+}
+
+.footerindex{
+  font-family: "Proxima Nova Black";
+  color: black;
+  font-size: 1.3vw;
+}
+
+.footerindexdec {
+  font-family: "Proxima Nova Regular";
+  color: black;
+  font-size: 1.1vw;
+  text-align: center;
+}
+
+.mail {
+  font-family: "SF Pro Rounded";
+  color: black;
+  font-size: 1.1vw;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.footeritems{
+  font-family: "SF Pro Rounded";
+  color: black;
+  font-size: 1vw;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.footeritems:hover {
+  color: #000000b5;
+}
+
+.endof {
+  border-top: 0.1vw solid black;
+}
+
+.arr {
+  font-family: "SF Pro Rounded";
+  color: black;
+  font-size: 1vw;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.arrp {
+  font-family: "SF Pro Rounded";
+  color: black;
+  font-size: 1vw;
+
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.arrp:hover {
+  color: #5a3838b5;
+}
+
+.loginpage {
+  background-image: url(./Assets/logpagesbg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+.email {
+  z-index: 999;
+}
+
+.logincontainer {
+  background-color: white;
+}
+
+.lgncont {
+  background: rgba(0, 0, 0, 0.76);
+}
+
+.lginheader{
+  font-family: "Proxima Nova Black";
+  font-size: 2.7vw;
+}
+
+.logindesc {
+  font-family: "Proxima Nova Medium";
+  font-size: 1vw;
+}
+
+.signupbtn {
+  background: black;
+  color: white;
+  font-family: "Proxima Nova Medium";
+  font-size: 1vw;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.signupbtn:hover {
+  background: white;
+  color: black;
+}
+
+.signupsection {
+  border: 0.1vw solid black;
+  color: black;
+  font-family: "Proxima Nova Medium";
+  font-size: 1vw;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.signupsection:hover {
+  background: black;
+  color: white;
+
+}
+
+.haveaccount {
+  font-family: "Proxima Nova Medium";
+  font-size: 0.8vw;
+
+}
+
+.borderred {
+  border: 1px solid red;
+}
+
+.blurred{
+  filter: blur(2px);
+
+}
+
+
+#email {
+  outline: none;
+  border: 1px solid black;
+  font-size: 1vw;
+  font-family: "Proxima Nova Medium";
+}
+
+
+
+#password {
+  outline: none;
+  border: 1px solid black;
+  font-size: 1vw;
+  font-family: "Proxima Nova Medium";
+}
+
+.emailverifier {
+  background: rgba(0, 0, 0, 0.957);
+  border-radius: 0.2vw;
+}
+
+
+.mapcontainer {
+  border-radius: 0.4vw;
+}
+
+.codehandler {
+  font-family: "Proxima Nova Medium";
+  font-size: 1.4vw;
+  border: none !important;
+  outline: none;
+}
+
+.codehandlerinput {
+  border-radius: 0.2vw;
+  border: 1px solid gray;
+  font-family: "Proxima Nova Medium";
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.checkdesc{
+
+  font-family: "Proxima Nova Medium";
+  font-size: 1.4vw;
+  border: none !important;
+  outline: none;
+
+}
+
+.bgemailconf {
+  opacity: 0;
+}
+
+.remainingtime {
+  font-family: "Proxima Nova Medium";
+  font-size: 1.1vw;
+}
+
