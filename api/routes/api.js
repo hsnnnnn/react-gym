@@ -12,10 +12,9 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const { google } = require('googleapis');
 app.use(expressession({
-  secret: '165196196515160', // Bu değeri güvenli bir şekilde saklayın
+  secret: '', 
   resave: false,
   saveUninitialized: true
-  // Diğer session ayarlarını da ekleyebilirsiniz
 }));
 console.log(config);
 const cors = require('cors');
@@ -32,13 +31,12 @@ app.use(cookieParser());
 
 // checking if the user is authenticated
 passport.use(new GoogleStrategy({
-  clientID: '1026510455576-49a6uqu9n8a1sgmeprtl8sev7uitfvgv.apps.googleusercontent.com',
-  clientSecret: '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',
-  callbackURL: process.env.REDIRECT_URI || "http://localhost:3001/auth/google/callback",// Bu URL'yi Google API Console'da doğruladığınızdan emin olun
+  clientID: '',
+  clientSecret: '',
+  callbackURL: process.env.REDIRECT_URI || "",
   scope: ['profile', 'email']
 },
 (accessToken, refreshToken, profile, done) => {
-  // Kullanıcı verilerini işleyin
   return done(null, profile);
 }));
 
@@ -52,17 +50,17 @@ passport.deserializeUser((obj, done) => {
   done(null, obj);
 });
 
-// Google ile giriş sayfası
+
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile', 'email'] })
 );
-// Google'dan dönen çağrı
+
 app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
-    // Başarılı kimlik doğrulama sonrasında yönlendirilecek rota
+
     console.log(req.user);
-    res.redirect('/'); // İsterseniz bir sayfaya yönlendirme yapabilirsiniz
+    res.redirect('/'); 
   }
 );
 
@@ -84,8 +82,8 @@ app.get('/auth/google/callback',
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'hsnistaken361@gmail.com',
-    pass: 'aqde nndd zixa zsil',
+    user: '',
+    pass: '',
   },
 });
 
@@ -115,13 +113,12 @@ app.post('/register', async (req, res) => {
             return res.status(500).send('Mail gönderme hatası');
           }
     
-          const expirationTime = 3 * 60 * 1000; // 3 dakika (ms cinsinden)
+          const expirationTime = 3 * 60 * 1000; 
           const tokenData = {
             expiresAt: Date.now() + expirationTime,
           };
     
           res.json(tokenData);
-          // res.status(200).send('Kullanıcı kaydı başarılı. Lütfen e-postanızı kontrol edin.'); // Bu satırı kaldırın
         });
       } catch (error) {
         console.error('Kullanıcı kaydetme hatası:', error);
@@ -152,13 +149,13 @@ app.post('/register', async (req, res) => {
         return res.status(500).send('Mail gönderme hatası');
       }
 
-      const expirationTime = 3 * 60 * 1000; // 3 dakika (ms cinsinden)
+      const expirationTime = 3 * 60 * 1000; 
       const tokenData = {
         expiresAt: Date.now() + expirationTime,
       };
 
       res.json(tokenData);
-      // res.status(200).send('Kullanıcı kaydı başarılı. Lütfen e-postanızı kontrol edin.'); // Bu satırı kaldırın
+      
     });
   } catch (error) {
     console.error('Kullanıcı kaydetme hatası:', error);
@@ -201,9 +198,9 @@ async function checkVerificationCode(email, codeToCheck) {
     }
   } catch (error) {
     console.error('VerificationCode kontrol hatası:', error);
-    throw error; // Hata durumunda hatayı yöneten fonksiyonlara iletmek için
+    throw error; 
   } finally {
-    // İşlemler bittiğinde yapılacak işlemler
+    
   }
 }
 
@@ -211,11 +208,10 @@ async function checkVerificationCode(email, codeToCheck) {
 app.post('/verify', async (req, res) => {
   const { email, verificationCode } = req.body;
 
-  // Veritabanında kullanıcıyı bul ve doğrulama kodunu kontrol et
   const user = await User.findOne({ email, verificationCode });
 
   if (user) {
-    // Doğrulama başarılı, kullanıcıyı güncelle
+
     user.isVerified = true;
     await user.save();
     res.status(200).send('Doğrulama başarılı.');
